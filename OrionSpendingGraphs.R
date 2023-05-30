@@ -3,6 +3,11 @@ library(dplyr)
 library(plotly)
 library(tidyverse)
 
+##------PURPOSE------
+#Orion was diagnosed with stage 4 renal failure when he was two years old. He was given 2 weeks to live,
+## but somehow, he kept getting better. He lived life as a normal dog for the next 11 months
+## I was curious how much was spent on him over his lifespan.
+
 #Import data and clean to useable format
 df <- read.xlsx("~//AdultStuff//PetStuff//Orion//Orion QOL Tracker.xlsx", sheet = 2) %>%
   mutate("Date" = as.Date(Date, origin="1899-12-30")) %>%
